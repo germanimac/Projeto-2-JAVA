@@ -106,21 +106,21 @@ public class testws {
         switch(dir){
             case "1":
                 write("0");
-                return "http://localhost:8080/test/webresources/teste/cima";
+                return "http://localhost:8080/webservice/webresources/teste/cima";
                 
             case "2":
                 write("0");
-                return "http://localhost:8080/test/webresources/teste/direita";
+                return "http://localhost:8080/webservice/webresources/teste/direita";
                 
             case "3":
                 write("0");
-                return "http://localhost:8080/test/webresources/teste/esquerda";
+                return "http://localhost:8080/webservice/webresources/teste/esquerda";
                 
             case "4":
                 write("0");
-                return "http://localhost:8080/test/webresources/teste/baixo";
+                return "http://localhost:8080/webservice/webresources/teste/baixo";
             default:
-                return "http://localhost:8080/test/webresources/teste/redir";
+                return "http://localhost:8080/webservice/webresources/teste/redir";
         }
         
     }
