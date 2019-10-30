@@ -61,58 +61,34 @@ public class control {
     @Produces("application/json")
     @Path("cima")
     public String getcima(){
+        write("1");
         return "cima";
     }
     @GET
     @Produces("application/json")
     @Path("esquerda")
     public String getesquerda(){
+        write("3");
         return "esquerda";
     }
     @GET
     @Produces("application/json")
     @Path("direita")
     public String getdireita(){
+        write("2");
         return "direita";
     }
     @GET
     @Produces("application/json")
     @Path("baixo")
     public String getbaixo(){
+        write("4");
         return "baixo";
-    }
-    @GET
-    @Produces("application/json")
-    @Path("redir")
-    public String getpath() throws Exception{
-        File f = new File("Direction.txt");
-        f.createNewFile();
-        String dir = readFileAsString("Direction.txt");
-        switch(dir){
-            case "1":
-                write("0");
-                return "http://localhost:8080/webserv/webresources/generic/cima";
-                
-            case "2":
-                write("0");
-                return "http://localhost:8080/webserv/webresources/generic/direita";
-                
-            case "3":
-                write("0");
-                return "http://localhost:8080/webserv/webresources/generic/esquerda";
-                
-            case "4":
-                write("0");
-                return "http://localhost:8080/webserv/webresources/generic/baixo";
-            default:
-                return "http://localhost:8080/webserv/webresources/generic/redir";
-        }
-        
     }
     
      private static void write(String data) {
         try {
-            Files.write(Paths.get("direction.txt"), data.getBytes());
+            Files.write(Paths.get("../d.txt"), data.getBytes());
         } catch (IOException e) {
             e.printStackTrace();
         }
