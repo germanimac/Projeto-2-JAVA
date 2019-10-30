@@ -4,8 +4,11 @@
  * and open the template in the editor.
  */
 package desenhar;
+
 class tile_background {
-    public int x,y;
+
+    public int x, y;
+
     //gera a posição dos blocos azul-claros
     public tile_background(int x, int y) {
         this.x = x;
@@ -14,15 +17,17 @@ class tile_background {
 
     public tile_background() {
     }
+
     //verifica se é posivel colocar um bloco em cima do tile que está na posição(X,Y)   
-    public boolean isopen(quadro[] q){
-        try{
-        for (int i=0;i<q.length;i++){
-            if (q[i].x == this.x && q[i].y==this.y)
-                return false;
+    public boolean isopen(quadro[] q) {
+        try {
+            for (int i = 0; i < q.length; i++) {
+                if (q[i].x == this.x && q[i].y == this.y) {
+                    return false;
+                }
+            }
+        } catch (Exception e) {
         }
-        }
-        catch(Exception e){}
         return true;
-    }  
+    }
 }

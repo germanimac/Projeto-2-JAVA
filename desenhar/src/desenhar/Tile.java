@@ -5,10 +5,13 @@
  */
 package desenhar;
 //serve como molde para o quadro
+
 abstract class Tile {
-    int x,y,valor;
+
+    int x, y, valor;
+
     abstract boolean collision(quadro[] q, int k, int num);
-    abstract int slide(int x,quadro[]q,int num);
-   
-   
+
+    abstract int slide(int x, quadro[] q, int num);
+
 }

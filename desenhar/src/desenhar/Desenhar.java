@@ -3,6 +3,7 @@
 //ALUNOS:   GABRIEL GONÇALVES MATTOS SANTINI     RA: 18189084
 //          MARCELO GERMANI OLMOS                RA: 18048298  
 package desenhar;
+
 import java.awt.*;
 import java.awt.event.*;
 import java.awt.image.*;
@@ -14,11 +15,11 @@ import javax.swing.ImageIcon;
 import org.json.JSONException;
 
 public class Desenhar extends Frame {
-   
+
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args){
+    public static void main(String[] args) {
         //inicia o jogo
         janela game = new janela();
         game.show();
@@ -30,13 +31,5 @@ public class Desenhar extends Frame {
         } catch (JSONException ex) {
             Logger.getLogger(Desenhar.class.getName()).log(Level.SEVERE, null, ex);
         }
-    }    
+    }
 }
-
-
-
-
-
-
-
-
