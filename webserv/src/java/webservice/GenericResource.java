@@ -76,31 +76,42 @@ public class GenericResource {
     @Produces("application/json")
     @Path("baixo")
     public String getbaixo(){
+        
         return "baixo";
     }
     @GET
     @Produces("application/json")
     @Path("redir")
     public String getpath() throws Exception{
-        File f = new File("Direction.txt");
-        f.createNewFile();
-        String dir = readFileAsString("Direction.txt");
+        String dir = readFileAsString("../d.txt");
         switch(dir){
             case "1":
                 write("0");
-                return "http://localhost:8080/webservice/webresources/generic/cima";
+                write("0");
+                write("0");
+                write("0");
+                return "http://localhost:8080/webserv/webresources/generic/cima";
                 
             case "2":
                 write("0");
-                return "http://localhost:8080/webservice/webresources/generic/direita";
+                write("0");
+                write("0");
+                write("0");
+                return "http://localhost:8080/webserv/webresources/generic/direita";
                 
             case "3":
                 write("0");
-                return "http://localhost:8080/webservice/webresources/generic/esquerda";
+                write("0");
+                write("0");
+                write("0");
+                return "http://localhost:8080/webserv/webresources/generic/esquerda";
                 
             case "4":
                 write("0");
-                return "http://localhost:8080/webservice/webresources/generic/baixo";
+                write("0");
+                write("0");
+                write("0");
+                return "http://localhost:8080/webserv/webresources/generic/baixo";
             default:
                 return "http://localhost:8080/webserv/webresources/generic/redir";
         }
@@ -109,9 +120,10 @@ public class GenericResource {
     
      private static void write(String data) {
         try {
-            Files.write(Paths.get("direction.txt"), data.getBytes());
+            Files.write(Paths.get("../d.txt"), data.getBytes());
         } catch (IOException e) {
             e.printStackTrace();
+            
         }
     }
      
