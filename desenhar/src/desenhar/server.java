@@ -47,8 +47,13 @@ public class server extends janela {
         while (true) {
             try {
 
-                String Path = readFromUrl("http://localhost:8080/webserv/webresources/generic/redir");
-                String mov = readFromUrl(Path);
+                ServerSocket s = new ServerSocket(12345);
+                Socket client = s.accept();
+                Scanner sc = new Scanner(client.getInputStream());
+                String mov = new String();
+                while (sc.hasNextLine()) {
+                     mov=(sc.nextLine());
+                }
                 if (mov.equals("cima")) {
                     jogo.Update(1);
                 };
@@ -62,9 +67,13 @@ public class server extends janela {
                     jogo.Update(3);
                 }
                 Thread.sleep(100);
+                sc.close();
+                s.close();
+                client.close();
             } catch (InterruptedException ex) {
                 Logger.getLogger(server.class.getName()).log(Level.SEVERE, null, ex);
             }
+            
         }
     }
      

@@ -7,6 +7,8 @@ package controle;
 
 import java.io.File;
 import java.io.IOException;
+import java.io.PrintStream;
+import java.net.Socket;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import javax.ws.rs.core.Context;
@@ -32,9 +34,10 @@ public class control {
     /**
      * Creates a new instance of control
      */
-    public control() {
+    public control() throws IOException {
+        this.cliente = new Socket("Localhost",12345);
     }
-
+    Socket cliente;
     /**
      * Retrieves representation of an instance of controle.control
      * @return an instance of java.lang.String
@@ -60,29 +63,37 @@ public class control {
     @GET
     @Produces("application/json")
     @Path("cima")
-    public String getcima(){
-        write("1");
+    public String getcima() throws IOException{
+        PrintStream saida = new PrintStream(cliente.getOutputStream());
+        saida.println("cima");
+        saida.close();
         return "cima";
     }
     @GET
     @Produces("application/json")
     @Path("esquerda")
-    public String getesquerda(){
-        write("3");
+    public String getesquerda() throws IOException{
+        PrintStream saida = new PrintStream(cliente.getOutputStream());
+        saida.println("esquerda");
+        saida.close();
         return "esquerda";
     }
     @GET
     @Produces("application/json")
     @Path("direita")
-    public String getdireita(){
-        write("2");
+    public String getdireita() throws IOException{
+        PrintStream saida = new PrintStream(cliente.getOutputStream());
+        saida.println("direita");
+        saida.close();
         return "direita";
     }
     @GET
     @Produces("application/json")
     @Path("baixo")
-    public String getbaixo(){
-        write("4");
+    public String getbaixo() throws IOException{
+        PrintStream saida = new PrintStream(cliente.getOutputStream());
+        saida.println("baixo");
+        saida.close();
         return "baixo";
     }
     
