@@ -42,24 +42,7 @@ public class control {
      * Retrieves representation of an instance of controle.control
      * @return an instance of java.lang.String
      */
-    @GET
-    @Produces("application/json")
-    public String getJson() throws IOException, Exception {
-        write("0");
-        return readFileAsString("Direction.txt");
-        
-    }
-        
-
-    /**
-     * PUT method for updating or creating an instance of testws
-     * @param content representation for the resource
-     * @return an HTTP response with content of the updated or created resource.
-     */
-    @PUT
-    @Consumes("application/json")
-    public void putJson(String content) {
-    }
+    
     @GET
     @Produces("application/json")
     @Path("cima")
@@ -97,20 +80,4 @@ public class control {
         return "baixo";
     }
     
-     private static void write(String data) {
-        try {
-            Files.write(Paths.get("../d.txt"), data.getBytes());
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-     
- 
-  public static String readFileAsString(String fileName)throws Exception 
-  { 
-    String data = ""; 
-    data = new String(Files.readAllBytes(Paths.get(fileName))); 
-    return data; 
-  } 
-
 }

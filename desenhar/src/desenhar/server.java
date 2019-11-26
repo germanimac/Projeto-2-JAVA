@@ -9,15 +9,12 @@ import java.net.ServerSocket;
 import java.net.Socket;
 import java.net.URL;
 import java.nio.charset.Charset;
-import java.nio.file.Files;
-import java.nio.file.Paths;
 import java.util.Scanner;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import org.json.JSONException;
-import org.json.JSONObject;
 
-public class server extends janela {
+public class server{
 
     public server() {
 
