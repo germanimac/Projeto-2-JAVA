@@ -50,4 +50,4 @@
   <li>Resolva o possivel problema de falta de servidor(é só mandar o netbeans baixar o glassfish server e selecionar ele como servidor).</li>
   <li>Execute ambos os projetos no NetBeans.</li>
   <li>Instale o aplicativo no seu dispositivo Android</li>
-  <li>**ATENÇÂO: o seu dispositivo Android e o computador onde o servidor e o jogo estão rodando devem estar na mesma rede wi-fi**</li>
+  <li>## ATENÇÂO: o seu dispositivo Android e o computador onde o servidor e o jogo estão rodando devem estar na mesma rede wi-fi</li>
