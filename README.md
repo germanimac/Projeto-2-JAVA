@@ -34,3 +34,20 @@
 <ul>
   <li>O microserviço possui quatro caminhos(URLs), um para cada direção e sentido (cima, baixo, esquerda,direita), que, ao serem acessadas, geram um socket e enviam a direção escolhida através da porta 12345, após isso, ele fecha o socket, para evitar problemas na abertura do socket.</li>
 </ul>
+
+# Instalação
+
+<ul>
+  <li>Baixe o release.</li>
+  <li>Extraia o arquivo compactado que foi baixado.</li>
+  <li>Abra a pasta extraida.</li>
+  <li>Delete a pasta App.</li>
+  <li>Extraia o arquivo compactado chamado App.</li>
+  <li>Abra o Android Studio e execute o projeto App nele.</li>
+  <li>Abra o NetBeans IDE 8.2.</li>
+  <li>Abra os projetos Desenhar e Webserv no NetBeans.</li>
+  <li>Aponte o caminho do arquivo java-json.rar (ele está na pasta junto com os projetos).</li>
+  <li>Resolva o possivel problema de falta de servidor(é só mandar o netbeans baixar o glassfish server e selecionar ele como servidor).</li>
+  <li>Execute ambos os projetos no NetBeans.</li>
+  <li>Instale o aplicativo no seu dispositivo Android</li>
+  <li>**ATENÇÂO: o seu dispositivo Android e o computador onde o servidor e o jogo estão rodando devem estar na mesma rede wi-fi**</li>
