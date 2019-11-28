@@ -22,3 +22,15 @@
   <li>O aplicativo tambem possui uma Main que é a responsavel por fazer a chamada das funçoes de chamada de movimento</li>
   <li>O movimento é feito com 4 botões um para cada direção de movimento</li>
 </ul>
+
+# O Servidor
+
+<ul>
+  <li>O servidor é uma classe com a função getMsg que recebe o objeto contendo o jogo. Essa função fica em um loop onde ela cria um socket na porta 12345 e fica esperando algo ser enviado pela porta, ao receber a informação, ele percebe para qual a direção e sentido que as peças do jogo devem se mover e chama a função de update, descrita no readme do projeto-1.</li>
+</ul>
+
+# O Microserviço
+
+<ul>
+  <li>O microserviço possui quatro caminhos(URLs), um para cada direção e sentido (cima, baixo, esquerda,direita), que, ao serem acessadas, geram um socket e enviam a direção escolhida através da porta 12345, após isso, ele fecha o socket, para evitar problemas na abertura do socket.</li>
+</ul>
