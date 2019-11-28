@@ -52,4 +52,4 @@
   <li>Instale o aplicativo no seu dispositivo Android</li>
  
 </ul>
- # ATENÇÂO: o seu dispositivo Android e o computador onde o servidor e o jogo estão rodando devem estar na mesma rede wi-fi
+ **ATENÇÂO: o seu dispositivo Android e o computador onde o servidor e o jogo estão rodando devem estar na mesma rede wi-fi**
